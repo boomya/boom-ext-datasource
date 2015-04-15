@@ -1,13 +1,14 @@
-package org.boom.share.manager.dao.impl;
+package com.boom.ext.datasource.dao.impl;
 
-import org.boom.share.manager.dao.UserMapper;
-import org.boom.share.manager.domain.UserDO;
+import com.boom.ext.datasource.dao.UserDao;
+import com.boom.ext.datasource.domain.UserDO;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 
 /**
  * Created by jiangshan on 14/8/24.
  */
-public class UserMapperImpl extends SqlSessionDaoSupport implements UserMapper {
+@Dao
+public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
 
     @Override
     public int deleteByPrimaryKey(Integer id) {

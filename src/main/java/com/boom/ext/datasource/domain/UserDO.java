@@ -1,4 +1,4 @@
-package org.boom.share.manager.domain;
+package com.boom.ext.datasource.domain;
 
 public class UserDO {
     /**

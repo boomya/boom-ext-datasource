@@ -1,13 +1,13 @@
-package org.boom.share.manager;
+package com.boom.ext.datasource;
 
-import org.boom.share.manager.dao.UserMapper;
+import com.boom.ext.datasource.dao.UserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by jiangshan on 14/8/22.
  */
-public class BoomMapperLocators {
+public class DaoLocator {
 
     private static ApplicationContext context;
     private static RuntimeException initException = null;
@@ -27,7 +27,7 @@ public class BoomMapperLocators {
         return context;
     }
 
-    public static UserMapper getUserMapper() {
-        return (UserMapper) getApplicationContext().getBean("userMapper");
+    public static UserDao getUserMapper() {
+        return (UserDao) getApplicationContext().getBean("userMapper");
     }
 }
